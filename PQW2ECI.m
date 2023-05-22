@@ -1,4 +1,4 @@
-function ECI = PQW2ECI(arg_prg, inc_angle, RAAN)
+function DCM_ECI = PQW2ECI(arg_prg, inc_angle, RAAN)
 
 DCM_arg_prg = [cos(arg_prg) -sin(arg_prg) 0;...
                sin(arg_prg) cos(arg_prg) 0;...
@@ -13,4 +13,4 @@ DCM_RAAN = [cos(RAAN) -sin(RAAN) 0;...
                0 0 0];
 
 
-ECI = (DCM_arg_prg * DCM_inc_angle * DCM_RAAN)';
+DCM_ECI = (DCM_arg_prg * DCM_inc_angle * DCM_RAAN)';

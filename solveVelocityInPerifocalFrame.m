@@ -14,6 +14,6 @@ function velocityInPQW = solveVelocityInPerifocalFrame(semimajor_axis, eccentric
 % % 1) 생성된 Repository에 matlab function 생성 후 commit - push
 % % 2) Input & output 각도 unit : deg, 거리 unit : km로 통일
 
-mu = 3.986004418 * 10e5; %[km^3/s^−2]
+mu = 3.986004418e5; %[km^3/s^−2]
 p = semimajor_axis*(1 - eccentricity^2);
 velocityInPQW = sqrt(mu/p).*[-sin(deg2rad(true_anomaly)); eccentricity + cos(deg2rad(true_anomaly)); 0];

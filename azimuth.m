@@ -7,3 +7,9 @@ E = ENU(:,1);
 N = ENU(:,2);
 
 az = acos(N./sqrt(E.^2 + N.^2));
+for i = 1:size(az,1)
+    if az(i) < 0
+        az(i) = az(i) + 2*pi;
+    end
+end
+az = rad2deg(az);

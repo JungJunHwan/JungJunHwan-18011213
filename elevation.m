@@ -17,3 +17,4 @@ while i <= size(el,1)
     end
     i=i+1;
 end
+el = rad2deg(el);

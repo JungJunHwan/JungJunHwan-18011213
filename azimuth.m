@@ -6,4 +6,4 @@ function az = azimuth(ENU)
 E = ENU(:,1);
 N = ENU(:,2);
 
-az = acos(N/sqrt(E.^2 + N.^2));
+az = acos(N./sqrt(E.^2 + N.^2));

@@ -12,9 +12,17 @@ el = asin(U./R_rel);
 
 i=1;
 while i <= size(el,1)
-    if el(i) < el_mask
+    if el(i) < deg2rad(el_mask)
         el(i) = NaN;
     end
+
+    if el(i) < 0
+        el(i) = el(i) + 2*pi;
+    elseif el(i) >= 2*pi
+        el(i) = el(i) - 2*pi;
+    end
+
     i=i+1;
+    
 end
 el = rad2deg(el);

@@ -15,5 +15,5 @@ function rangeInPQW = solveRangeInPerifocalFrame(semimajor_axis, eccentricity, t
 % % 2) Input & output 각도 unit : deg, 거리 unit : km로 통일
 
 p = semimajor_axis*(1 - eccentricity^2);
-r = p / (1 + eccentricity*cos(deg2rad(true_anomaly)));
-rangeInPQW = [r*cos(deg2rad(true_anomaly)); r*sin(deg2rad(true_anomaly)); 0];
+r = p ./ (1 + eccentricity.*cos(deg2rad(true_anomaly)));
+rangeInPQW = [r.*cos(deg2rad(true_anomaly)); r.*sin(deg2rad(true_anomaly)); 0];
